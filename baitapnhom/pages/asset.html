@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.1.1-web/css/all.min.css">
+    <script src="../assets/font/fontawesome-pro-6.1.1-web/js/all.min.js"></script>
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" >
+        <div class="navbar">
+            <div class="navbar-header" title="Misa quản lý tài sản">
+                <div class="navbar-header__item" style="position:relative;">
+                    <div class="navbar-header__logo icon"title="Quản lý tài sản"></div>
+                    <div class="navbar-header__text">MISA QLTS</div>
+                </div>
+            </div>
+            <div class="navbar-body">
+                <div class="navbar-body__item">
+                    <div class="navbar-body__logo icon icon-overice iconleft icon__size-22x2" title="Tổng quan"></div>
+                    <div class="navbar-body__text">Tổng quan</div>
+                </div>
+                <div class="navbar-body__item active-navbar-body__item">
+                    <div class="navbar-body__logo icon icon-asset iconleft icon__size-22" title="Tài sản"></div>
+                    <div class="navbar-body__text">Tài sản</div>
+                    <div class="navbar-body__logo icon icon-down"></div>
+                </div>
+                <div class="navbar-body__item">
+                    <div class="navbar-body__logo icon icon-asset1 iconleft icon__size-21" title="Tài sản HT-ĐB"></div>
+                    <div class="navbar-body__text">Tài sản HT-ĐB</div>
+                    <div class="navbar-body__logo icon icon-down"></div>
+                </div>
+                <div class="navbar-body__item">
+                    <div class="navbar-body__logo icon icon-tool iconleft icon__size-22x2" title="Công cụ dụng cụ"></div>
+                    <div class="navbar-body__text">Công cụ dụng cụ</div>
+                    <div class="navbar-body__logo icon icon-down"></div>
+                </div>
+                <div class="navbar-body__item">
+                    <div class="navbar-body__logo icon icon-category iconleft icon__size-17" title="Danh mục"></div>
+                    <div class="navbar-body__text">Danh Mục</div>
+                </div>
+                <div class="navbar-body__item">
+                    <div class="navbar-body__logo icon icon-search iconleft icon__size-23x2" title="Tra cứu"></div>
+                    <div class="navbar-body__text">Tra cứu</div>
+                    <div class="navbar-body__logo icon icon-down"></div>
+                </div>
+                <div class="navbar-body__item">
+                    <div class="navbar-body__logo icon icon-report iconleft icon__size-22x2" title="Báo cáo"></div>
+                    <div class="navbar-body__text">Báo cáo</div>
+                    <div class="navbar-body__logo icon icon-down"></div>
+                </div>
+            </div>
+            <div class="navbar-size">
+                <div class="navbar-size__item" id="btn-zoomout">
+                    <div class="navbar-size__icon icon icon-zoomout icon__size-12"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page-body-wrapper">
+            <div class="header">
+                <h4>Danh sách tài sản </h4>
+                <div class="header-right display-flex">
+                    <div>Sở tài chính</div>
+                    <div class="header-date">
+                        <span style="margin: 0 14px">Năm</span><span style="font-weight: bold;">2021 </span>
+                        <div class="">
+                            <div class="header-group__icon--item icon icon-up icon__size-8"></div>
+                            <div class="header-group__icon--item icon icon-down2 icon__size-8"></div>
+                        </div>
+
+                    </div>
+                    <div class="header-group__icon display-flex">
+                        <div class="header-group__icon--item icon__size-24 icon icon-notify" title="Thông báo"></div>
+                        <div class="header-group__icon--item icon__size-24 icon icon-folder" title="Thư mục"></div>
+                        <div class="header-group__icon--item icon__size-24 icon icon-support" title="Hỗ trợ"></div>
+                        <div style=" display: flex; align-items: center;justify-content: center;">
+                            <div class="header-group__icon--item icon__size-24 icon icon-user"></div>
+                            <div class="header-group__icon--item icon__size-8 icon icon-down2" style="padding-right: 5px;margin-left:0"></div>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+
+            </div>
+            <div class="bodydata">
+                <div class="m-row m-row__form">
+                    <div class="m-row__left display-flex">
+                        <!-- tạo input search -->
+                        <div class="input-search">
+                            <div class="icon input__search--icon__item input__search--icon" title ="tìm kiếm" ></div>
+                            <input type="text" name="" id="txtsearch" class="input input__search--text"
+                                placeholder="Tìm kiếm tài sản">
+                        </div>
+                        <!-- combobox -->
+                        <div class="combobox" style="margin: 0 10px;">
+                            <div class="combobox__control">
+                                <div class="combobox__icon--left icon icon-filter icon__size-14" title ="lọc dữ liệu"></div>
+                                <input type="text" name="" id="" class="input combobox__input" value="Loại tài sản">
+                                <div class="combobox__icon--right icon icon-down1 icon__size-5" title ="ấn vào đây" ></div>
+                            </div>
+                            
+                            <div class="combobox__option">
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 1</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 2</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 3</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 4</div>
+                                </div>
+                                  <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 5</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 6</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 7</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 8</div>
+                                </div>
+                            </div>
+                           
+                    
+                        </div>
+                        <!-- combobox -->
+                        <div class="combobox">
+                            <div class="combobox__control">
+                                <div class="combobox__icon--left icon icon-filter icon__size-14" title ="lọc dữ liệu"></div>
+                                <input type="text" name="" id="" class="input combobox__input" value="Bộ phận sử dụng">
+                                <div class="combobox__icon--right icon icon-down1 icon__size-5" title ="chọ thành phần"></div>
+                            </div>
+                            <div class="combobox__option">
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 1</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 2</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 3</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 4</div>
+                                </div>
+                                  <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 5</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 6</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 7</div>
+                                </div>
+                                <div class="combobox__option--item">
+                                    <div class="combobox__option--item-text">Kết quả 8</div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                    <div class="m-row__right display-flex">
+                        <button class="btn btn__icon"  id="btn--add">
+                            <div class="btn__icon--item">
+                                <div class="icon icon-add icon__size-11"></div>
+                                <div class="btn--text">Thêm tài sản</div>
+                            </div>
+                        </button>
+                        <button class="btnfunction distance">
+                            <div class="bntfunction__more icon icon-more icon__size-18"></div>
+                        </button>
+                        <button class="btnfunction" id ="btn--remove">
+                            <div class="bntfunction__remove icon icon-remove icon__size-18"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="m-row managetable">
+                    <div class="table__nodata">
+                        <div class="table__nodata--item">
+                                  
+                        <div>Dữ liệu hiện tại đang trống</div>
+                        <img style="width: 200px;height: 200px;" src="https://img.freepik.com/free-vector/empty-concept-illustration_114360-1233.jpg?w=826&t=st=1659888360~exp=1659888960~hmac=f2e259507a1e36ee953ade13f8ac8b3ec61ec052f85b05d63b7f3756518b70b9">
+                            </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><button class="resize-width"><label class="checkbox"><input type="checkbox" ><span class="tick"></span></label></button></th>
+                                <th class="text-align-center tooltip--th" title ="số thứ tự"><button class="resize-width">STT</button></th>
+                                <th><button class="resize-width text-align-left">Mã tài sản</button></th>
+                                <th><button class="resize-width text-align-left">Tên tài sản</button></th>
+                                <th><button class="resize-width text-align-left">Loại sản phẩm </button></th>
+                                <th><button class="resize-width text-align-left">Bộ phận sử dụng </button></th>
+                                <th><button class="resize-width text-align-right ">Số lượng </button></th>
+                                <th><button class="resize-width text-align-right ">Nguyên giá </button></th>
+                                <th tooltip--th><button class=" text-align-right resize-width">HM/KH lũy kế </button></th>
+                                <th><button class="resize-width text-align-right ">Giá trị còn lại </button></th>
+                                <th><button class="resize-width  text-align-center">Chức năng </button></th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <td><label class="checkbox"><input type="checkbox" ><span class="tick"></span></label></td>
+                                <td class="text-align-center">1</td>
+                                <td class="text-align-left" id ="IdAsset">55H7WN72/2022</td>
+                                <td class="text-align-left" id ="nameAsset">Dell Inspiron 3467</td>
+                                <td class="text-align-left">Máy vi tính xách tay</td>
+                                <td class="text-align-left">Phòng Hành chính Kế toán</td>
+                                <td class="text-align-right quantity">1</td>
+                                <td class="text-align-right price">20.000.000</td>
+                                <td class="text-align-right accumulated">894.000</td>
+                                <td class="text-align-right price-remaining">19.106.000</td>
+                                <td class="text-align-center">
+                                    <div class="tablefunction display-flex">
+                                        <div class="icon icon-edit icon__size-14"></div>
+                                        <div class="icon icon-detail icon__size-14"></div>
+                                    </div>
+                                </td>
+
+                            </tr> -->
+                            <!-- <tr class="page__table">
+                                <td class="text-align-left" colspan="6">
+                                    <div class="display-flex" style="font-size:11px;margin-left:17px">
+                                        <p class="page__table--text">Tổng số <span style="font-weight: bold;">200</span>
+                                            bản ghi</p>
+                                        <div class="combobox__control combox--number">
+                                            <input type="text" name="" id="" class="input combobox__input--number"
+                                                value="20">
+                                            <div class="combobox__icon--right icon icon-down1 icon__size-5"
+                                                title="chọn để chọn các thành phần"></div>
+                                        </div>
+                                        <div class="page__table--number display-flex">
+                                            <div class="page--number-item">
+                                                <div class="icon icon-back icon__size-8"></div>
+                                            </div>
+                                            <div class="page--number-item number-active">1</div>
+                                            <div class="page--number-item">2</div>
+                                            <div class="page--number-item">...</div>
+                                            <div class="page--number-item">10</div>
+                                            <div class="page--number-item">
+                                                <div class="icon icon-next icon__size-8"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td class="text-align-right sum-quantity bold">1</td>
+                                <td class="text-align-right sum-price bold">20.000.000</td>
+                                <td class="text-align-right sum-accumulated bold">894.000</td>
+                                <td class="text-align-right sum-price-rimaining bold">19.106.000</td>
+                                <td></td>
+                            </tr> -->
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- dialog form sửa tài chính -->
+    <div class="dialog__handle" id="dialog__handle">
+        <div class="dialog">
+            <div class="dialog__header">
+                <h3 id ="handle">Sửa tài sản</h3>
+                <div class="icon icon-close icon__size-18" id="btn--close"></div>
+            </div>
+            <div class="dialog__body">
+                <div class="m-row">
+                    <div class="group-input size-33">
+                        <div class="margin-text">Mã tài sản <span style="color: red;">*</span></div>
+                        <input type="text" prop-name="AssetCode" name="Mã tài sản" id="txtAssetCode" class="input input-width " required value="" tabindex="1001">
+                    </div>
+
+                    <div class="group-input size-66 margin-lr-16">
+                        <div class="margin-text">Tên tài sản <span style="color: red;">*</span></div>
+                        <input type="text" prop-name="AssetName" name="Tên tài sản" id="txtNameAsset" class="input input-width" required value="" placeholder="Nhập tên tài sản" tabindex="1002">
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="group-input size-33">
+                        <div class="margin-text">Mã bộ phận sử dụng<span style="color: red;">*</span></div>
+                        <div class="combobox" style="width:calc(100% - 2px)">
+                            <div class="combobox__control combobox__width" style="width:100%">
+                                <input type="text" name="" prop-name="IdPartsUsed" id="txtIdPartsUsed" class="input combobox__input" style="padding-left: 0;" value="Chọn mã bộ phận sử dụng">
+                                <div class="combobox__icon--right icon icon-down1 icon__size-5" title ="chọ thành phần"></div>
+                            </div>
+                                <div class="combobox__option remove__Combobox">
+                                    <div class="combobox__option--table">
+                                        <table style="width: 100%;" class ="table">
+                                            <thead class ="combobox__table--header">
+                                                <th class ="text-align-center" style="width:60px">Mã</th>
+                                                <th class ="text-align-left" style="width:calc(100% - 60px)">Tên</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class ="text-align-center idValue">1</td>
+                                                    <td  class ="text-align-left NameValue">Kết quả 1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class ="text-align-center idValue">1</td>
+                                                    <td class ="text-align-left NameValue">Kết quả 1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class ="text-align-center idValue">2</td>
+                                                    <td class ="text-align-left NameValue">Kết quả 2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class ="text-align-center idValue">3</td>
+                                                    <td class ="text-align-left NameValue">Kết quả 3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class ="text-align-center idValue">4</td>
+                                                    <td class ="text-align-left NameValue">Kết quả 4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class ="text-align-center idValue">5</td>
+                                                    <td class ="text-align-left NameValue">Kết quả 5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    
+                                    
+                                </div>
+                                </div>
+                                
+                    
+                        </div>
+                        <!-- <button class="combobox__control combobox__width">
+                            <input type="text" name="Mã bộ phận sử dụng" id="" class="input input-width absolute" required value="" placeholder="Chọn mã bộ phận sử dụng" tabindex="1003">
+                            <div class="icon icon-down1 icon__size-5 combobox__icon"></div>
+                        </button> -->
+                       
+                    </div>
+
+                    <div class="group-input size-66 margin-lr-16">
+                        <div class="margin-text">Tên bộ phận sử dụng</div>
+                        <input type="text" prop-name="PartsUsed" name="Tên bộ phận sử dụng" id="txtNamePartsUsed" class="input input-width" value="" disabled>
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="group-input size-33">
+                        <div class="margin-text">Mã loại sản phẩm<span style="color: red;">*</span></div>
+                        <div class="combobox" style="width:calc(100% - 2px)">
+                            <div class="combobox__control combobox__width" style="width:100%">
+                                <input type="text" prop-name="Categories" name="" id="" class="input combobox__input" style="padding-left: 0;" value="Chọn mã loại sản phẩm">
+                                <div class="combobox__icon--right icon icon-down1 icon__size-5" title ="chọ thành phần"></div>
+                            </div>
+                            <div class="combobox__option remove__Combobox">
+                                <div class="combobox__option--table">
+                                    <table style="width: 100%;" class ="table">
+                                        <thead class ="combobox__table--header">
+                                            <th class ="text-align-center" style="width:60px">Mã</th>
+                                            <th class ="text-align-left" style="width:calc(100% - 60px)">Tên</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class ="text-align-center idValue">1</td>
+                                                <td  class ="text-align-left NameValue">Kết quả 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class ="text-align-center idValue">1</td>
+                                                <td class ="text-align-left NameValue">Kết quả 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class ="text-align-center idValue">2</td>
+                                                <td class ="text-align-left NameValue">Kết quả 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class ="text-align-center idValue">3</td>
+                                                <td class ="text-align-left NameValue">Kết quả 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class ="text-align-center idValue">4</td>
+                                                <td class ="text-align-left NameValue">Kết quả 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class ="text-align-center idValue">5</td>
+                                                <td class ="text-align-left NameValue">Kết quả 5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                
+                            </div>
+                            </div>
+                    
+                        </div>
+                       
+                    </div>
+
+                    <div class="group-input size-66 margin-lr-16">
+                        <div class="margin-text">Loại tài sản</div>
+                        <input type="text" prop-name="TypeAsset" name="Loại tài sản" id="txtTypeAsset" class="input input-width" value="" disabled>
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="group-input size-33">
+                        <div class="margin-text">Số lượng<span style="color: red;">*</span></div>
+                        <button class="combobox__control combobox__width" style="border:none !important;">
+                            <input type="text" prop-name="Quantity" name="Số lượng" number required id="" class="input input-width text-align-right absolute" placeholder="" style="padding-right:40px" value="0" tabindex="1005">
+                            <div class="combobox__icon">
+                                <div class="header-group__icon--item icon icon-up icon__size-8"></div>
+                                <div class="header-group__icon--item icon icon-down2 icon__size-8"></div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="group-input size-33">
+                        <div class="margin-text">Nguyên giá<span style="color: red;">*</span></div>
+                        <input type="text" prop-name="Price" name="Nguyên giá" number required id="txtPrice" class="input input-width text-align-right" value="0"  tabindex="1006">
+                        
+                    </div>
+                    <div class="group-input size-33 margin-right-10">
+                        <div class="margin-text">Số năm sử dụng <span style="color: red;">*</span></div>
+                        <button class="combobox__control combobox__width">
+                            <input type="text" prop-name="YearUse" name="Số năm sử dụng" number required id="yearuse" class="input input-width text-align-right absolute" placeholder="" style="padding-right:40px" value="0"  tabindex="1007">
+                            <div class="combobox__icon">
+                                <div class="header-group__icon--item icon icon-up icon__size-8"></div>
+                                <div class="header-group__icon--item icon icon-down2 icon__size-8"></div>
+                            </div>
+                        </button>
+                       
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="group-input size-33">
+                        <div class="margin-text">Tỉ lệ hao mòn (%) <span style="color: red;">*</span></div>
+                        <input type="text" prop-name="AtroPhy" name="Tỉ lệ hao mòn" number required id="txtAtrophy" class="input input-width text-align-right" value="0"  tabindex="1008">
+                       
+                       
+                    </div>
+                    <div class="group-input size-33">
+                        <div class="margin-text">Giá trị hao mòn năm<span style="color: red;">*</span></div>
+                        <input type="text" prop-name="Depreciation" name="Giá trị hao mòn" number required id="txtdepreciation" class="input input-width text-align-right" value="0"  tabindex="1009">
+                        
+                    </div>
+                    <div class="group-input size-33 margin-right-10">
+                        <div class="margin-text">Năm theo dõi</div>
+                        <input type="text" prop-name="YearWatch" name="Năm theo dõi" required id="txtYearWatch" class="input input-width text-align-right" value="2022" disabled>
+                    </div>
+                </div>
+
+                <div class="m-row" style="margin-bottom: 25px;">
+                    <div class="group-input size-33">
+                        <div class="margin-text">Ngày mua <span style="color: red;">*</span></div>
+                        <button class="combobox__control combobox__width">
+                            <input type="text" prop-name="PurchaseDate" name="Ngày mua" id="purchasedate" required class="input input-width absolute date" calender value="" placeholder="" tabindex="1010" >
+                            <div class="icon icon-calendar icon__size-18 combobox__icon"></div>
+                        </button>
+                    </div>
+                    <div class="group-input size-33">
+                        <div class="margin-text" prop-name="DateUse">Ngày bắt đầu sử dụng <span style="color: red;">*</span></div>
+                        <button class="combobox__control combobox__width">
+                            <input type="text" name="Ngày bắt đầu sử dụng" id="startday" required class="input input-width absolute date" calender value="" placeholder="" tabindex="1011" >
+                            <div class="icon icon-calendar icon__size-18 combobox__icon"></div>
+                        </button>
+                    </div>
+                    <div class="group-input size-33 margin-right-10">
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="dialog__footer">
+                <button class="btn btn-save active"  tabindex="1012">
+                    Lưu
+                </button>
+                <button class="btn btn-cancel" id="btn-cancel" tabindex="1013">
+                    Hủy
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- dialog cảnh báo -->
+    <div class="dialog__handle" id="dialog__notify">
+        <div class="dialog__notify">
+            <div class="dialog__notify--header">
+                <div class="icon-warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class ="text--notify">Bạn có muốn hủy khai báo tài sản này ?</div>
+            </div>
+            <div class="dialog__notify--footer">
+                <button class="btn btn-confirm">
+                    Hủy bỏ
+                </button>
+                <button class="btn btn-cancel" style="margin:0 10px;">
+                    Không
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="dialog__handle" id="dialog__warring">
+        <div class="dialog__notify">
+            <div class="dialog__notify--header">
+                <div class="icon-warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class ="text--notify">Bạn có muốn hủy khai báo tài sản này ?</div>
+            </div>
+            <div class="dialog__notify--footer">
+                <button class="btn btn-confirm" tabindex="1">
+                    Hủy bỏ
+                </button>
+                <button class="btn btn-cancel" style="margin:0 10px;" tabindex="2">
+                    Không
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="dialog__handle" id="dialog__confirm">
+        <div class="dialog__notify">
+            <div class="dialog__notify--header">
+                <div class="icon-warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class ="text--notify">Thông tin thay đổi sẽ không được cập nhật nếu bạn không lưu.bạn có muốn lưu các thay đổi này ?</div>
+            </div>
+            <div class="dialog__notify--footer">
+                <button class="btn btn-save">
+                    Lưu
+                </button>
+                <button class="btn btn-nosave" style="margin-right:10px;">
+                    Không lưu
+                </button>
+                <button class="btn btn-cancel" style="margin:0 10px;">
+                    Hủy bỏ
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="m-loading">
+        <div class="loader"></div>
+    </div>
+</body>
+<!-- khai báo thư viện jquery -->
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<!-- script dùng chung -->
+<script src="../js/components/dialog.js"></script>
+<script src="../js/components/combobox.js"></script>
+<script src="../js//main.js"></script>
+<script src="../js//components/table.js"></script>
+<!-- script dùng riêng -->
+<script src="../js/pages/asset.js"></script>
+<script src="../js/handle/menutext.js"></script>
+</html>

@@ -1,0 +1,220 @@
+.icon-asset {
+    background-position: -65px -153px;
+}
+.icon-overice{
+    background-position: -21px -153px;
+}
+.icon-asset1 {
+    background-position: -110px -153px;
+}
+
+.icon-tool {
+    background-position: -153px -153px;
+}
+
+.icon-category {
+    background-position: -197px -155px;
+}
+
+.icon-search {
+    background-position: -241px -153px;
+}
+
+.icon-report {
+    background-position: -329px -153px;
+}
+/* icon active */
+.icon-overice__active{
+    background-position: -22px -198px !important;
+}
+.icon-asset__active{
+    background-position: -65px -197px !important;
+}
+
+.icon-asset1__active {
+    background-position: -110px -197px !important;
+}
+
+.icon-tool__active {
+    background-position: -153px -197px !important;
+}
+
+.icon-category__active {
+    background-position: -198px -200px !important;
+}
+
+.icon-search__active {
+    background-position: -240px -196px !important;
+}
+
+.icon-report__active {
+    background-position: -330px -198px !important;
+}
+
+.icon-down {
+    background-position: -158px -293px;
+    position: absolute;
+    right:10px;
+}
+
+.icon-notify {
+    background-position: -332px -109px;
+}
+
+.icon-folder {
+    background-position: -199px -23px;
+}
+
+.icon-support {
+    background-position: -67px -67px;
+
+}
+
+.icon-user {
+    background-position: -23px -23px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.icon-tick-white{
+    background-position: -71px -512px;
+}
+
+.icon-up {
+  background-position: -28px -338px;
+}
+.icon-down1{
+    background-position: -72px -338px;
+    position: absolute;
+    right:15px;
+}
+.icon-down2{
+    background-position: -72px -338px;
+}
+.icon-filter {
+    background-position: -243px -69px;
+    position: absolute;
+    left: 10px;
+}
+
+.icon-add{
+    background-position: -204px -424px;
+    margin-right: 2px;
+}
+.icon-add-menu{
+    background-position: -244px -112px;
+}
+.icon-remove{
+    background-position: -463px -111px;
+}
+.icon-replication{
+    background-position: -155px -111px;
+}
+.icon-more{
+    background-position: -287px -111px;
+}
+.icon-remove{
+    background-position: -463px -111px;
+}
+.icon-edit{
+    margin-right: 15px;
+    background-position: -156px -68px;
+}
+.icon-detail{
+    background-position: -244px -112px;
+}
+.icon-back{
+    background-position: -206px -248px;
+}
+.icon-next{
+    background-position: -250px -248px;
+}
+.icon-close{
+    background-position: -375px -287px;
+}
+.icon-calendar{
+    background-position: -287px -67px;
+}
+.icon-tick{
+    margin: 0 15px 0 10px;
+    background-position: -160px -424px;
+}
+.icon-zoomout{
+    background-position: -29px -290px;
+}
+.icon-zoom{
+    background-position:-73px -290px;
+}
+.icon-warning{
+
+    font-size:30px;
+    color:gold;
+    margin:0 20px;
+}
+
+
+/* set size icon */
+.icon__size-24 {
+    width: 24px;
+    height: 24px;
+}
+.icon__size-8 {
+    width: 8px !important;
+    height: 8px !important;
+}
+.icon__size-5 {
+    width: 7px;
+    height: 5px;
+}
+.icon__size-14 {
+    width: 16px;
+    height: 16px;
+}
+.icon__size-18 {
+    width: 18px;
+    height: 18px;
+}
+.icon__size-11{
+    width: 8px;
+    height: 11px;
+}
+.icon__size-11x2{
+    width: 11px;
+    height: 11px;
+    margin: 6px 5px;
+}
+.icon__size-12{
+    width: 7px;
+    height: 12px;
+}
+.icon__size-20{
+    width: 20px;
+	height: 21px;
+}
+.icon__size-21{
+    width: 21px;
+	height: 22px;
+}
+
+.icon__size-22{
+    width: 22px;
+	height: 23px;
+}
+.icon__size-22x2{
+    width: 22px;
+	height: 22px;
+}
+
+.icon__size-23x2{
+    width: 23px;
+	height: 23px;
+}
+.icon__size-20x2{
+    width: 20px;
+	height: 20px;
+}
+.icon__size-17{
+    width: 22px;
+    height: 18px;
+}

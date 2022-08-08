@@ -1,0 +1,124 @@
+.navbar {
+    width: 226px;
+    background-color: #1c3048;
+    height: auto;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+/* css navbar head */
+.navbar-header {
+    height: 50px;
+    margin-bottom: 15px;
+  
+   
+}
+.navbar-header__item{
+    padding: 17px 15px 9px 15px;
+    align-items: center;
+    display: flex;
+}
+.navbar-header__logo {
+    background-position: -20px -680px;
+    width: 36px;
+    height: 36px;
+}
+
+.navbar-header__text {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: bold;
+    min-height: 20px;
+    overflow: hidden;
+}
+
+/* css navbar body */
+.navbar-body {
+    margin: 0 11px;
+}
+.navbar-body .navbar-body__item{
+    opacity: 0.5;
+    position: relative;
+    border-radius: 6px;
+    height: 40px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.navbar-body__logo.icon{
+    position: absolute;
+    z-index: 99;
+}
+.active-navbar-body__item{
+    opacity: 1 !important;
+    background-color: #1aa4c8;
+}
+.hover-navbar-body__item{
+    opacity: 1 !important;
+    background-color: #287837;
+}
+.navbar-body__logo {
+    width: 13px;
+    height: 7px;
+}
+.navbar-body__text{
+    color: #fff;
+    text-align: center;
+    margin-left: 35px;
+    overflow: hidden;
+    min-height:20px;
+}
+/* navbar size */
+.navbar-size{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.navbar-size__item{
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    position: relative;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #fff;
+}
+
+/* @media only screen and (max-width: 1300px) {
+    .navbar{
+       width: 80px;
+       transition: all 0.5s ease;
+    }
+    .page-body-wrapper {
+        width: calc(100% - 80px + 250px) !important;
+    }
+    .navbar-header__text{
+       display: none;
+    }
+    .icon-down{
+       display: none;
+    }
+    .navbar-body__text{
+       display: none;
+    }
+    .navbar-size{
+        display: none;
+    }
+
+} */
+.setpadding{
+    padding: 0 !important;
+    justify-content: center !important;
+}
